@@ -1,0 +1,26 @@
+[
+	{
+		"osm_id": 1,
+		"name": "باغ کتاب",
+		"longitude": 1,
+		"latitude": 1,
+        "image_urls": ["https://gamefa.com/wp-content/uploads/2026/07/sony-playstation-physical-games-2-1-1280x720.jpg"],
+        "comments": []
+	},
+	{
+        "osm_id": 2,
+		"name": "میدان کتاب",
+		"longitude": 1,
+		"latitude": 1,
+        "image_urls": ["https://gamefa.com/wp-content/uploads/2026/07/sony-playstation-physical-games-2-1-1280x720.jpg"],
+        "comments": ["عالی"]
+	},
+	{
+        "osm_id": 3,
+		"name": "کتابخونه",
+		"longitude": 1,
+		"latitude": 1,
+        "image_urls": ["https://gamefa.com/wp-content/uploads/2026/07/sony-playstation-physical-games-2-1-1280x720.jpg"],
+        "comments": ["1", "2", "3"]
+	}
+]
