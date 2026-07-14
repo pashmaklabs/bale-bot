@@ -11,8 +11,6 @@ SERVER_BASE_URL = os.getenv("SERVER_BASE_URL")
 
 # Backend requests
 
-default_image = ''                                          ##### correct this
-
 def get_place_comments(place_id: int) -> list:
     api_response = requests.get(f"{SERVER_BASE_URL}/comments/{str(place_id)}")
 
@@ -23,16 +21,6 @@ def get_place_comments(place_id: int) -> list:
         comments = response['comments']
 
     return comments
-
-def get_image(place_image_url: str):
-    api_response = requests.get(place_image_url)            ##### correct this
-
-    if api_response.status_code == 200:
-        image = api_response.content
-    else:
-        image = default_image
-
-    return image
 
 def get_places(search_term: str) -> list:
     # api_response = requests.get(f"{SERVER_BASE_URL}/places/?q={search_term}")
