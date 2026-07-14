@@ -1,6 +1,5 @@
 from BackRequests import (
     get_place_comments,
-    get_image,
     get_places,
 )
 
@@ -30,9 +29,10 @@ class Place:
 
         return comments
 
-    def get_place_images(self):
-        images = [get_image(image_url) for image_url in self.image_urls]
-        return images
+    def get_first_image_url(self):
+        if self.image_urls:
+            return self.image_urls[0]
+        return None
 
     @classmethod
     def get_places(self, search_term: str):

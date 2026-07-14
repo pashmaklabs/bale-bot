@@ -17,6 +17,7 @@ from Handlers import (
     message_handler,
     error,
     button_handler,
+    handle_invalid_button
 )
 import os
 from dotenv import find_dotenv, load_dotenv
@@ -42,10 +43,8 @@ if __name__ == "__main__":
 
     # Messages
     app.add_handler(MessageHandler(filters.TEXT, message_handler))
+    app.add_handler(CallbackQueryHandler(handle_invalid_button, pattern = InvalidCallbackData))
     app.add_handler(CallbackQueryHandler(button_handler))
-    # app.add_handler(
-    #     CallbackQueryHandler(handle_invalid_button, pattern=InvalidCallbackData)
-    # )
 
     # Errors
     app.add_error_handler(error)
