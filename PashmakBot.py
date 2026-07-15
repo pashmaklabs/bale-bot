@@ -9,11 +9,11 @@ from telegram.ext import (
     CallbackQueryHandler,
     InvalidCallbackData,
 )
-from Commands import (
+from src.Commands import (
     start_command,
     help_command
 )
-from Handlers import (
+from src.Handlers import (
     message_handler,
     error,
     button_handler,

@@ -1,4 +1,4 @@
-from BackRequests import (
+from src.BackRequests import (
     get_place_comments,
     get_places,
 )

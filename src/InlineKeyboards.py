@@ -1,6 +1,6 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import os
-from Types import Place, SearchResult
+from src.Types import Place, SearchResult
 from dotenv import find_dotenv, load_dotenv
 
 # Getting environment variables

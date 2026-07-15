@@ -4,17 +4,17 @@ from telegram.ext import (
     CallbackContext,
     InvalidCallbackData,
 )
-from Types import (
+from src.Types import (
     Place,
     SearchResult,
     create_mocked_data,
 )
-from InlineKeyboards import (
+from src.InlineKeyboards import (
     build_search_result_keyboard,
     build_place_keyboard,
     build_comment_keyboard,
 )
-from CallbackPatterns import (
+from src.CallbackPatterns import (
     back_pattern,
     result_display_pattern,
     comment_display_pattern,
