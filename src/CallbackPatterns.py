@@ -1,4 +1,4 @@
-from Types import SearchResult
+from src.Types import SearchResult
 
 def back_pattern(data: object):
     return True if (type(data) == tuple and "back" in data) else False
