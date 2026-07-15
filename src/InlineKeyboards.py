@@ -24,10 +24,12 @@ def build_search_result_keyboard(search_results: list[Place]) -> InlineKeyboardM
 def build_place_keyboard(place: SearchResult) -> InlineKeyboardMarkup:
     latitude, longitude, place_id = place.current_place.latitude, place.current_place.longitude, place.current_place.osm_id
     map_url = f"{FRONT_BASE_URL}/map/place?id={place_id}&lat={latitude}&lng={longitude}#c{latitude}-l{longitude}-16.00z-0p"
+    routing_url = f"{FRONT_BASE_URL}/map/dir?end={latitude},{longitude}"
 
     buttons = [
         [InlineKeyboardButton("نظرات", callback_data = ("comments", place, 0))],
         [InlineKeyboardButton("مشاهده روی نقشه", url = map_url)],
+        [InlineKeyboardButton("مسیریابی", url = routing_url)],
         [InlineKeyboardButton("صفحه قبل", callback_data = ("back", place.places))]
     ]
 
