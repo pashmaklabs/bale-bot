@@ -13,8 +13,8 @@ class Place:
             self.osm_id: int = place_data["id"]
 
         self.name: str = place_data["name"]
-        self.latitude: float = place_data["latitude"]
-        self.longitude: float = place_data["longitude"]
+        self.latitude: float = round(place_data["latitude"], 7)
+        self.longitude: float = round(place_data["longitude"], 7)
         self.image_urls: list[str] = place_data["image_urls"]
         self.rating: int = place_data["rating"]
         self.comments: list[Comment] = self.get_comments()
@@ -68,14 +68,14 @@ class SearchResult:
         self.places = places
 
 
-import json
-def create_mocked_data():
-    with open("Bot/Mocked.json", "r", encoding = "UTF-8") as file:
-        data = json.load(file)
+# import json
+# def create_test_data():
+#     with open("src/Mocked.json", "r", encoding = "UTF-8") as file:
+#         data = json.load(file)
 
-    places = [Place(p) for p in data]
+#     places = [Place(p) for p in data]
 
-    return places
+#     return places
 
 
 if __name__ == "__main__":

@@ -2,12 +2,10 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import (
     ContextTypes,
     CallbackContext,
-    InvalidCallbackData,
 )
 from src.Types import (
     Place,
     SearchResult,
-    create_mocked_data,
 )
 from src.InlineKeyboards import (
     build_search_result_keyboard,
@@ -54,9 +52,9 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     response_message = await update.message.reply_text("دارم می گردم...")
 
-    search_results = Place.get_places(user_message)[:5]
-    # mocked_search_results = create_mocked_data()[:5]
-    # search_results = mocked_search_results
+    search_results = Place.get_places(user_message)[:8]
+    # test_search_results = create_test_data()[:5]
+    # search_results = test_search_results
     if search_results:
         response_text = "اینم چیز هایی که پیدا کردم (: با انتخاب هر کدوم می تونی جزئیاتش رو ببینی"
 

@@ -23,7 +23,6 @@ def get_place_comments(place_id: int) -> list:
     return comments
 
 def get_places(search_term: str) -> list:
-    # api_response = requests.get(f"{SERVER_BASE_URL}/places/?q={search_term}")
     api_response = requests.get(f"{SERVER_BASE_URL}/places/?q={search_term}")
 
     places = []
