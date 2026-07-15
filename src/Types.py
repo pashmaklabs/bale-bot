@@ -35,8 +35,8 @@ class Place:
         return None
 
     @classmethod
-    def get_places(self, search_term: str):
-        places_data = get_places(search_term)
+    def get_places(self, search_term: str, count: int):
+        places_data = get_places(search_term)[:count]
 
         places = [Place(p) for p in places_data]
             

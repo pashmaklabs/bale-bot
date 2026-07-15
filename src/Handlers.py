@@ -52,7 +52,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     response_message = await update.message.reply_text("دارم می گردم...")
 
-    search_results = Place.get_places(user_message)[:8]
+    search_results = Place.get_places(user_message, 8)
     # test_search_results = create_test_data()[:5]
     # search_results = test_search_results
     if search_results:
