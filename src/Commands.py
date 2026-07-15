@@ -10,7 +10,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"سلام {user.first_name or ''} به پشمک خوش اومدی! هر جایی که می خوای بری رو توصیف کن تا برات پیداش کنم (:")
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("lorem")
+    text = "پشمک بهت کمک می کنه به جایی که تو ذهنت هست برسی، فقط کافیه توصیفش کنی.\nدستورات بات:\n/start\n بعد از اجرا توصیف جایی که می خوای رو بفرست تا پیداش کنم"
+    await update.message.reply_text(text)
 
 # async def clear_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 #     """Clears the callback data cache"""
