@@ -1,4 +1,13 @@
-FROM python:3.11.1
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "./PashmakBot.py"]
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "PashmakBot.py"]
